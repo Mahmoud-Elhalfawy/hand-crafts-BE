@@ -8,6 +8,7 @@ public record Product(
     String category,
     String description,
     String startingPrice,
+    String imageUrl,
     String imageAlt,
     boolean customisable,
     List<String> tags

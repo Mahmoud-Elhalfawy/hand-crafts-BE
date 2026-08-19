@@ -12,64 +12,103 @@ public class CatalogService {
 
     private final List<Product> products = List.of(
         new Product(
-            "cozy-baby-blanket",
-            "Cozy Baby Blanket",
-            "Baby Gifts",
-            "A soft crochet blanket made for newborn gifts, stroller walks, and nursery keepsakes.",
+            "granny-square-shoulder-bag",
+            "Granny Square Shoulder Bag",
+            "Bags",
+            "A compact crochet shoulder bag with floral granny squares, a long strap, and button detail.",
             "Custom quote",
-            "Folded handmade crochet baby blanket in soft neutral yarn",
+            null,
+            "Model wearing a cream, dusty rose, and navy granny square crochet shoulder bag",
             true,
-            List.of("blanket", "baby", "gift")
+            List.of("bag", "granny square", "floral", "shoulder bag")
         ),
         new Product(
-            "amigurumi-keepsake",
-            "Amigurumi Keepsake Toy",
-            "Amigurumi",
-            "A made-to-order crochet character or animal designed as a playful handmade keepsake.",
+            "granny-square-sundress",
+            "Granny Square Sundress",
+            "Dresses",
+            "A white sundress finished with a black and blue crochet granny square bodice.",
             "Custom quote",
-            "Small crochet amigurumi toy with stitched details",
+            null,
+            "White dress with black straps and a blue, white, and black granny square crochet bodice",
             true,
-            List.of("toy", "custom", "keepsake")
+            List.of("dress", "granny square", "summer", "wearable")
         ),
         new Product(
-            "textured-throw-pillow",
-            "Textured Throw Pillow",
-            "Home Decor",
-            "A decorative crochet pillow cover that adds texture and warmth to a favorite room.",
+            "open-stitch-bandana",
+            "Open Stitch Crochet Bandana",
+            "Bandanas",
+            "A lightweight tie-back crochet bandana with an airy open stitch pattern and scalloped edge.",
             "Custom quote",
-            "Square crochet pillow with raised stitch texture",
+            null,
+            "Red open stitch crochet bandana worn as a hair scarf",
             true,
-            List.of("home", "decor", "pillow")
+            List.of("bandana", "hair scarf", "red", "open stitch")
         ),
         new Product(
-            "market-tote",
-            "Market Tote",
+            "flower-granny-bandana",
+            "Flower Granny Square Bandana",
             "Accessories",
-            "A sturdy crochet tote for errands, yarn shopping, beach days, or everyday use.",
+            "A floral granny square bandana available in bright and neutral color combinations.",
             "Custom quote",
-            "Reusable crochet tote bag with long handles",
+            null,
+            "Blue and white floral granny square crochet bandana worn over loose hair",
             true,
-            List.of("bag", "accessory", "reusable")
+            List.of("bandana", "hair scarf", "granny square", "floral")
         ),
         new Product(
-            "flower-coasters",
-            "Flower Coaster Set",
-            "Home Decor",
-            "A sweet set of crochet coasters inspired by petals, tea time, and handmade hosting.",
+            "multi-color-granny-bandana",
+            "Multi-Color Granny Bandana",
+            "Bandanas",
+            "A customizable granny square bandana made in colorways like blue, pink, green, yellow, purple, brown, black, orange, and teal.",
             "Custom quote",
-            "Set of floral crochet coasters arranged on a table",
+            null,
+            "Grid of granny square crochet bandanas in multiple color options",
             true,
-            List.of("coasters", "floral", "table")
+            List.of("bandana", "custom colors", "granny square", "floral")
         ),
         new Product(
-            "crochet-headband",
-            "Crochet Headband",
+            "tie-on-hip-scarf",
+            "Tie-On Crochet Hip Scarf",
+            "Wearables",
+            "A triangular crochet hip scarf that ties at the waist for styling over jeans, skirts, or beachwear.",
+            "Custom quote",
+            null,
+            "Red triangular crochet hip scarf tied over black jeans",
+            true,
+            List.of("hip scarf", "belt", "red", "festival")
+        ),
+        new Product(
+            "granny-square-crop-top",
+            "Granny Square Crop Top",
+            "Tops",
+            "A fitted crochet crop top made from granny square panels with bold contrast straps and edging.",
+            "Custom quote",
+            null,
+            "Black, blue, and white granny square crochet crop top worn with a white skirt",
+            true,
+            List.of("top", "granny square", "wearable", "summer")
+        ),
+        new Product(
+            "granny-square-pouch",
+            "Granny Square Drawstring Pouch",
+            "Bags",
+            "A soft drawstring crochet pouch with floral granny square panels and scalloped edging.",
+            "Custom quote",
+            null,
+            "Stack of cream granny square crochet pouches with brown, black, pink, and blue flowers",
+            true,
+            List.of("pouch", "bag", "drawstring", "granny square")
+        ),
+        new Product(
+            "lace-triangle-scarf",
+            "Lace Triangle Crochet Scarf",
             "Accessories",
-            "A soft everyday headband that can be customized by color, width, and yarn texture.",
+            "A delicate open lace triangle scarf for layering around the neck or styling as a head covering.",
             "Custom quote",
-            "Crochet headband in a soft blush yarn",
+            null,
+            "Taupe lace triangle crochet scarf styled around the neck",
             true,
-            List.of("wearable", "accessory", "custom")
+            List.of("scarf", "lace", "triangle scarf", "neutral")
         )
     );
 
