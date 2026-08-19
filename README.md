@@ -24,7 +24,7 @@ The API runs on `http://localhost:8080` by default.
 | --- | --- | --- |
 | `PORT` | `8080` | HTTP port used by Quarkus |
 | `CORS_ALLOWED_ORIGINS` | `http://localhost:5173,http://127.0.0.1:5173` | Comma-separated frontend origins |
-| `STOREFRONT_ASSET_BASE_URL` | empty | Optional frontend domain used to turn `/products/...` image paths into absolute URLs |
+| `STOREFRONT_ASSET_BASE_URL` | `http://localhost:5173` | Frontend domain used to turn `/products/...` image paths into absolute URLs |
 
 ## Endpoints
 
@@ -39,7 +39,7 @@ The API runs on `http://localhost:8080` by default.
 
 Product data is currently seeded in `CatalogService` so it is easy to replace once product photos, prices, and descriptions are available.
 
-Product images are served by the frontend from `public/products`. By default the API returns relative paths such as `/products/granny-square-shoulder-bag.svg`, which resolve against the React storefront. Set `STOREFRONT_ASSET_BASE_URL` when the API should return absolute image URLs for a deployed storefront.
+Product images are served by the frontend from `public/products`. By default the API returns absolute local frontend URLs such as `http://localhost:5173/products/granny-square-shoulder-bag.svg`. Set `STOREFRONT_ASSET_BASE_URL` to the deployed React storefront domain in production.
 
 ## Verify
 

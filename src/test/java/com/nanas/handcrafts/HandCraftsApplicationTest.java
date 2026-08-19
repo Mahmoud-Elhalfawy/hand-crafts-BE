@@ -30,7 +30,7 @@ class HandCraftsApplicationTest {
             .body("size()", greaterThan(0))
             .body(
                 "find { it.id == 'granny-square-shoulder-bag' }.imageUrl",
-                is("/products/granny-square-shoulder-bag.svg")
+                is("http://localhost:5173/products/granny-square-shoulder-bag.svg")
             );
     }
 
