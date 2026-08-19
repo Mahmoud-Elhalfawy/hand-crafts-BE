@@ -6,9 +6,13 @@ import java.util.Locale;
 import java.util.Optional;
 
 import jakarta.enterprise.context.ApplicationScoped;
+import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 @ApplicationScoped
 public class CatalogService {
+
+    @ConfigProperty(name = "app.storefront.asset-base-url", defaultValue = "")
+    String assetBaseUrl;
 
     private final List<Product> products = List.of(
         new Product(
@@ -113,18 +117,23 @@ public class CatalogService {
     );
 
     public List<Product> findAll(Optional<String> category) {
-        return category
+        List<Product> selectedProducts = category
             .map(this::normalise)
             .map(selectedCategory -> products.stream()
                 .filter(product -> normalise(product.category()).equals(selectedCategory))
                 .toList())
             .orElse(products);
+
+        return selectedProducts.stream()
+            .map(this::withResolvedImageUrl)
+            .toList();
     }
 
     public Optional<Product> findById(String id) {
         String selectedId = normalise(id);
         return products.stream()
             .filter(product -> normalise(product.id()).equals(selectedId))
+            .map(this::withResolvedImageUrl)
             .findFirst();
     }
 
@@ -138,5 +147,41 @@ public class CatalogService {
 
     private String normalise(String value) {
         return value.toLowerCase(Locale.ROOT).trim();
+    }
+
+    private Product withResolvedImageUrl(Product product) {
+        return new Product(
+            product.id(),
+            product.name(),
+            product.category(),
+            product.description(),
+            product.startingPrice(),
+            resolveImageUrl(product.imageUrl()),
+            product.imageAlt(),
+            product.customisable(),
+            product.tags()
+        );
+    }
+
+    private String resolveImageUrl(String imageUrl) {
+        if (imageUrl == null || imageUrl.isBlank() || isAbsoluteUrl(imageUrl)) {
+            return imageUrl;
+        }
+
+        String baseUrl = assetBaseUrl == null ? "" : assetBaseUrl.trim();
+        if (baseUrl.isBlank()) {
+            return imageUrl;
+        }
+
+        String normalisedBaseUrl = baseUrl.endsWith("/")
+            ? baseUrl.substring(0, baseUrl.length() - 1)
+            : baseUrl;
+        String normalisedImageUrl = imageUrl.startsWith("/") ? imageUrl : "/" + imageUrl;
+
+        return normalisedBaseUrl + normalisedImageUrl;
+    }
+
+    private boolean isAbsoluteUrl(String imageUrl) {
+        return imageUrl.startsWith("http://") || imageUrl.startsWith("https://");
     }
 }

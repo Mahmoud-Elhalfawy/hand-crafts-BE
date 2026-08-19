@@ -27,7 +27,11 @@ class HandCraftsApplicationTest {
             .when().get("/api/products")
             .then()
             .statusCode(200)
-            .body("size()", greaterThan(0));
+            .body("size()", greaterThan(0))
+            .body(
+                "find { it.id == 'granny-square-shoulder-bag' }.imageUrl",
+                is("/products/granny-square-shoulder-bag.svg")
+            );
     }
 
     @Test
