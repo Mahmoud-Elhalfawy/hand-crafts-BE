@@ -17,7 +17,7 @@ public class CatalogService {
             "Bags",
             "A compact crochet shoulder bag with floral granny squares, a long strap, and button detail.",
             "Custom quote",
-            null,
+            "/products/granny-square-shoulder-bag.svg",
             "Model wearing a cream, dusty rose, and navy granny square crochet shoulder bag",
             true,
             List.of("bag", "granny square", "floral", "shoulder bag")
@@ -28,7 +28,7 @@ public class CatalogService {
             "Dresses",
             "A white sundress finished with a black and blue crochet granny square bodice.",
             "Custom quote",
-            null,
+            "/products/granny-square-sundress.svg",
             "White dress with black straps and a blue, white, and black granny square crochet bodice",
             true,
             List.of("dress", "granny square", "summer", "wearable")
@@ -39,7 +39,7 @@ public class CatalogService {
             "Bandanas",
             "A lightweight tie-back crochet bandana with an airy open stitch pattern and scalloped edge.",
             "Custom quote",
-            null,
+            "/products/open-stitch-bandana.svg",
             "Red open stitch crochet bandana worn as a hair scarf",
             true,
             List.of("bandana", "hair scarf", "red", "open stitch")
@@ -50,7 +50,7 @@ public class CatalogService {
             "Accessories",
             "A floral granny square bandana available in bright and neutral color combinations.",
             "Custom quote",
-            null,
+            "/products/flower-granny-bandana.svg",
             "Blue and white floral granny square crochet bandana worn over loose hair",
             true,
             List.of("bandana", "hair scarf", "granny square", "floral")
@@ -61,7 +61,7 @@ public class CatalogService {
             "Bandanas",
             "A customizable granny square bandana made in colorways like blue, pink, green, yellow, purple, brown, black, orange, and teal.",
             "Custom quote",
-            null,
+            "/products/multi-color-granny-bandana.svg",
             "Grid of granny square crochet bandanas in multiple color options",
             true,
             List.of("bandana", "custom colors", "granny square", "floral")
@@ -72,7 +72,7 @@ public class CatalogService {
             "Wearables",
             "A triangular crochet hip scarf that ties at the waist for styling over jeans, skirts, or beachwear.",
             "Custom quote",
-            null,
+            "/products/tie-on-hip-scarf.svg",
             "Red triangular crochet hip scarf tied over black jeans",
             true,
             List.of("hip scarf", "belt", "red", "festival")
@@ -83,7 +83,7 @@ public class CatalogService {
             "Tops",
             "A fitted crochet crop top made from granny square panels with bold contrast straps and edging.",
             "Custom quote",
-            null,
+            "/products/granny-square-crop-top.svg",
             "Black, blue, and white granny square crochet crop top worn with a white skirt",
             true,
             List.of("top", "granny square", "wearable", "summer")
@@ -94,7 +94,7 @@ public class CatalogService {
             "Bags",
             "A soft drawstring crochet pouch with floral granny square panels and scalloped edging.",
             "Custom quote",
-            null,
+            "/products/granny-square-pouch.svg",
             "Stack of cream granny square crochet pouches with brown, black, pink, and blue flowers",
             true,
             List.of("pouch", "bag", "drawstring", "granny square")
@@ -105,7 +105,7 @@ public class CatalogService {
             "Accessories",
             "A delicate open lace triangle scarf for layering around the neck or styling as a head covering.",
             "Custom quote",
-            null,
+            "/products/lace-triangle-scarf.svg",
             "Taupe lace triangle crochet scarf styled around the neck",
             true,
             List.of("scarf", "lace", "triangle scarf", "neutral")
